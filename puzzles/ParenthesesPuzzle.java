@@ -5,10 +5,14 @@
  * Each open parentheses should have a corresponding close parentheses
  * and they should correspond correctly.
  */
+package puzzles;
+
+import java.util.Stack;
+
 public class ParenthesesPuzzle {
 	public static boolean isBalanced(String source){
 		if (source == null) return true;
-		Stack<String> stack = new Stack<String>();
+		Stack<Character> stack = new Stack<Character>();
 		int i = 0;
 		while (i < source.length()){
 			if (source.charAt(i) == '(' ){
@@ -21,5 +25,6 @@ public class ParenthesesPuzzle {
 			i++;
 		}
 		if (stack.empty()) return true;
+		else return false;
 	}
 }
