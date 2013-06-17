@@ -12,11 +12,11 @@ import java.util.Stack;
 public class ParenthesesPuzzle {
 	public static boolean isBalanced(String source){
 		if (source == null) return true;
-		Stack<Character> stack = new Stack<Character>();
+		Stack<String> stack = new Stack<String>();
 		int i = 0;
 		while (i < source.length()){
 			if (source.charAt(i) == '(' ){
-				stack.push( '(' );
+				stack.push( "(" );
 			}
 			else if (source.charAt(i) == ')' ){
 				if (stack.empty()) return false; // unbalanced!
@@ -24,7 +24,6 @@ public class ParenthesesPuzzle {
 			}
 			i++;
 		}
-		if (stack.empty()) return true;
-		else return false;
+		return stack.empty();
 	}
 }
