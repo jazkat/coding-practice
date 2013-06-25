@@ -1,4 +1,4 @@
-coding-practice
-===============
+repo-bueno
+==========
 
-Coding problems, challenges, and puzzles.
+Coding challenges and puzzles.
