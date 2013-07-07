@@ -1,6 +1,9 @@
+package puzzles;
+
 import static org.junit.Assert.*;
-import org.junit.Test;
 import static puzzles.ParenthesesPuzzle.*;
+
+import org.junit.Test;
 
 public class ParenthesesTest {
 

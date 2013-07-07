@@ -1,12 +1,16 @@
-import static org.junit.Assert.*;
-import org.junit.Test;
-import static puzzles.StringPermutations.permutations;
-import static java.util.Arrays.asList;
-import java.util.List;
-import java.util.ArrayList;
+package puzzles;
 
-public class StringPermutationsTest {
-	
+import static java.util.Arrays.asList;
+import static org.junit.Assert.*;
+import static puzzles.StringPermutations.*;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.Test;
+
+public class PermutationsTest {
+
 	private void permsMatchesExpected(String testStr, List<String> expected){
 		List<String> actual = permutations(testStr);
 		
