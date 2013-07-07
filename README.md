@@ -1,4 +1,7 @@
-repo-bueno
+fun-and-profit
 ==========
 
-Coding challenges and puzzles.
+1. Do some coding puzzles
+2. Have fun
+3. ???
+4. Profit!
