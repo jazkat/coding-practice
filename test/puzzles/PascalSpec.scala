@@ -6,29 +6,37 @@ import puzzles.Pascal._
 
 class PascalSpec extends FlatSpec {
   
-  def checkExpected(height: Int, expected: (Int, Int) => Boolean): Boolean = {
+  def printAndCheckExpected(expected: Int => Boolean, height: Int = 5): Boolean = {
     for (row <- 0 to height){
       for (col <- 0 to row){
         print(pascal(col, row) + " ")
-        if (!expected(col, row)) return false
       }
+      assert(expected(row))
       println()
     }
-    return true
+    println()
+    return false
   }
-
-  "Pascal's Triangle" should "have symmetrical rows" in {
-    def symmetricRow(col: Int, row: Int): Boolean = {
-      pascal(col, row) == pascal(row-col, row)
+  
+  def symmetricRow(row: Int): Boolean = {
+      for (col <- 0 to row / 2)
+        if (pascal(col, row) != pascal(row-col, row)) return false
+      return true
     }
-    
-    checkExpected(5, symmetricRow)
+  
+  def exponentialRow(row: Int): Boolean = {
+      var sum: Int = 0
+      for (col <- 0 to row)
+        sum += pascal(col, row)
+      return sum == (scala.math.pow(2, row))
+    }
+
+  "Pascal's Triangle" should "have symmetric rows" in {
+    printAndCheckExpected(symmetricRow)
   }
 
-//  "Pascal's Triangle" should "have rows whose sums increase exponentially" in {
-//    def exponential(col: Int, row: Int): Boolean = {
-//      //assertEquals(pascal)
-//    }
-//  }
+  "Pascal's Triangle" should "have rows whose sums increase exponentially" in {
+    printAndCheckExpected(exponentialRow, 10)
+  }
   
 }
