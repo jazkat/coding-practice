@@ -8,7 +8,7 @@ package puzzles;
 import structs.SinglyLinkedList;
 import structs.SinglyLinkedList.Node;
 
-public class Reverse {
+public class ReverseLinkedList {
 	public static SinglyLinkedList recursiveReverse(SinglyLinkedList myList){
 		if (myList == null) return null;
 		Node head = myList.head;
