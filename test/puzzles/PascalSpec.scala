@@ -4,6 +4,11 @@ import org.scalatest.FlatSpec
 import org.junit.Assert._
 import puzzles.Pascal._
 
+/**
+ * Trying out ScalaTest for specification testing.
+ * Not too impressed with it, the functionality is
+ * very minimal and I still have to write raw assertions.
+ */
 class PascalSpec extends FlatSpec {
   
   def printAndCheckExpected(expected: Int => Boolean, height: Int = 5): Boolean = {
