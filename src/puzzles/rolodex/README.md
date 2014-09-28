@@ -3,8 +3,7 @@ Coding challenge: funky rolodex
 
 You’re tasked with taking entries of personal information in multiple formats and normalizing each entry into a standard JSON format. Write your formatted, valid JSON out to a file with two-space indentation and keys sorted alphabetically.
 
-Input
-=====
+## Input
 
 Your program will be fed an input file of n lines. Each line contains “entry” information, which consists of a first name, last name, phone number, color, and zip code. The order and format of these lines vary in three separate ways.
 
@@ -18,8 +17,7 @@ Firstname, Lastname, 10013, 646 111 0101, Green
 
 Some lines may be invalid and should not interfere with the processing of subsequent valid lines. A line should be considered invalid if its phone number does not contain the proper number of digits.
 
-Output
-======
+## Output
 
 The program should write a valid, formatted JSON object out to result.out. The JSON representation should be indented with two spaces and the keys should be sorted in ascending order.
 
@@ -28,8 +26,7 @@ Successfully processed lines should result in a normalized addition to the list 
 The “entries” list should be sorted in ascending alphabetical order by (last name, first name).
 The complete output schema is specified below.
 
-Sample
-======
+## Sample
 
 For the input
 
