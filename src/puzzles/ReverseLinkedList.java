@@ -5,8 +5,8 @@
  */
 package puzzles;
 
-import structs.SinglyLinkedList;
-import structs.SinglyLinkedList.Node;
+import puzzles.structs.SinglyLinkedList;
+import puzzles.structs.SinglyLinkedList.Node;
 
 public class ReverseLinkedList {
 	public static SinglyLinkedList recursiveReverse(SinglyLinkedList myList){

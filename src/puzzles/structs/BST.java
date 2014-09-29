@@ -1,4 +1,4 @@
-package structs;
+package puzzles.structs;
 
 /*
  * An implementation of Binary Search Tree.

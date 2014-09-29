@@ -1,4 +1,4 @@
-package structs;
+package puzzles.structs;
 
 /*
  * A very simple implementation
